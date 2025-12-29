@@ -1,0 +1,50 @@
+package com.jvs0n.apartmentmanagerbackend.domain;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+@Table(name = "building")
+public class Building {
+    @Id
+    @Column(name = "idbuilding", nullable = false)
+    private Integer id;
+
+    @Size(max = 45)
+    @NotNull
+    @Column(name = "buildingnr", nullable = false, length = 45)
+    private String buildingnr;
+
+    @Size(max = 200)
+    @NotNull
+    @Column(name = "streetname", nullable = false, length = 200)
+    private String streetname;
+
+    @NotNull
+    @Column(name = "streetnr", nullable = false)
+    private Integer streetnr;
+
+    @NotNull
+    @Column(name = "postalcode", nullable = false)
+    private Integer postalcode;
+
+    @Size(max = 200)
+    @NotNull
+    @Column(name = "city", nullable = false, length = 200)
+    private String city;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "manager_idmanager", nullable = false)
+    private Manager managerIdmanager;
+
+    @Column(name = "maxapartmentsowned")
+    private Integer maxapartmentsowned;
+
+
+}
