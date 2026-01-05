@@ -44,7 +44,7 @@ public class Building {
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "manager_idmanager", nullable = false)
-    private Manager managerIdmanager;
+    private Manager manager;
 
     @Builder.Default
     @Column(name = "maxapartmentsowned")
