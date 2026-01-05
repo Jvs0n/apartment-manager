@@ -2,15 +2,17 @@ package com.jvs0n.apartmentmanagerbackend.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
 @Getter
 @Setter
 @Entity
+@Builder
 @Table(name = "apartment")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Apartment {
     @EmbeddedId
     private ApartmentId id;

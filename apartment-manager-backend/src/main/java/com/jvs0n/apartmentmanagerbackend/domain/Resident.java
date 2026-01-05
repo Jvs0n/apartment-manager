@@ -1,24 +1,27 @@
 package com.jvs0n.apartmentmanagerbackend.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
+import java.time.ZonedDateTime;
 
 @Getter
 @Setter
 @Entity
+@Builder
 @Table(name = "resident")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Resident {
     @Id
+    @GeneratedValue
     @Column(name = "idresident", nullable = false)
-    private Integer id;
+    private long id;
 
     @Size(max = 200)
     @NotNull
@@ -31,12 +34,13 @@ public class Resident {
     private String lastname;
 
     @NotNull
+    @PastOrPresent
     @Column(name = "birthday", nullable = false)
-    private LocalDate birthday;
+    private ZonedDateTime birthday;
 
     @Size(max = 34)
     @NotNull
-    @Column(name = "iban", nullable = false, length = 34)
+    @Column(name = "iban", nullable = false, length = 34, unique = true)
     private String iban;
 
     @Size(max = 255)
@@ -44,6 +48,7 @@ public class Resident {
     @Column(name = "telnr", nullable = false)
     private String telnr;
 
+    @Email
     @Size(max = 50)
     @NotNull
     @Column(name = "email", nullable = false, length = 50)

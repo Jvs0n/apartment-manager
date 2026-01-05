@@ -3,13 +3,15 @@ package com.jvs0n.apartmentmanagerbackend.domain;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @Entity
+@Builder
 @Table(name = "building")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Building {
     @Id
     @Column(name = "idbuilding", nullable = false)
@@ -43,8 +45,9 @@ public class Building {
     @JoinColumn(name = "manager_idmanager", nullable = false)
     private Manager managerIdmanager;
 
+    @Builder.Default
     @Column(name = "maxapartmentsowned")
-    private Integer maxapartmentsowned;
+    private Integer maxapartmentsowned = 1;
 
 
 }
