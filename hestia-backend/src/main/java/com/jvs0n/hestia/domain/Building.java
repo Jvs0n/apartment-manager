@@ -20,7 +20,7 @@ public class Building {
 
     @Size(max = 45)
     @NotNull
-    @Column(name = "buildingnr", nullable = false, length = 45)
+    @Column(name = "buildingnr", nullable = false, length = 45, unique = true)
     private String buildingnr;
 
     @Size(max = 200)

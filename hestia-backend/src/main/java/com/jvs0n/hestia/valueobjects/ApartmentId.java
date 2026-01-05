@@ -1,4 +1,4 @@
-package com.jvs0n.hestia.domain;
+package com.jvs0n.hestia.valueobjects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
@@ -18,7 +18,7 @@ public class ApartmentId implements Serializable {
     private static final long serialVersionUID = -7920164446596482148L;
     @NotNull
     @Column(name = "apartmentnr", nullable = false)
-    private Integer apartmentnr;
+    private long apartmentnr;
 
     @Size(max = 45)
     @NotNull

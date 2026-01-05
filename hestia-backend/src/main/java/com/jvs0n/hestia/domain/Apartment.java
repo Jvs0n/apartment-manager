@@ -1,5 +1,6 @@
 package com.jvs0n.hestia.domain;
 
+import com.jvs0n.hestia.valueobjects.ApartmentId;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -17,10 +18,11 @@ public class Apartment {
     @EmbeddedId
     private ApartmentId id;
 
-    @MapsId("buildingnr")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "buildingnr", nullable = false, referencedColumnName = "buildingnr")
-    private Building buildingnr;
+    @JoinColumn(name = "buildingnr", nullable = false, referencedColumnName = "buildingnr" ,
+            insertable = false,
+            updatable = false)
+    private Building building;
 
     @NotNull
     @Column(name = "livingspace", nullable = false)

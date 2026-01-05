@@ -17,11 +17,11 @@ public class SharedspaceId implements Serializable {
     private static final long serialVersionUID = 845930801752238320L;
     @NotNull
     @Column(name = "idsharedspace", nullable = false)
-    private Integer idsharedspace;
+    private long idsharedspace;
 
     @NotNull
     @Column(name = "building_idbuilding", nullable = false)
-    private Integer buildingIdbuilding;
+    private long buildingIdbuilding;
 
 
 }

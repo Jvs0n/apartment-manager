@@ -14,7 +14,7 @@ import java.time.LocalDate;
 public class ApartmentHasOwner {
     @Id
     @Column(name = "resident_idresident_owner", nullable = false)
-    private Integer id;
+    private long id;
 
     @MapsId
     @OneToOne(fetch = FetchType.LAZY, optional = false)
