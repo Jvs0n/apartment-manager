@@ -1,4 +1,4 @@
-package com.jvs0n.apartmentmanagerbackend;
+package com.jvs0n.hestia;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;

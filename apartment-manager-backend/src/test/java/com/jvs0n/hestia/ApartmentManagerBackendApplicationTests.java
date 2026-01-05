@@ -1,4 +1,4 @@
-package com.jvs0n.apartmentmanagerbackend;
+package com.jvs0n.hestia;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

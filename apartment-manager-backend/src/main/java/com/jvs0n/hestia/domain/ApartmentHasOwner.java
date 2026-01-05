@@ -1,6 +1,5 @@
-package com.jvs0n.apartmentmanagerbackend.domain;
+package com.jvs0n.hestia.domain;
 
-import com.jvs0n.apartmentmanagerbackend.valueobjects.ApartmentHasTenantId;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -11,20 +10,16 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity
-@Table(name = "apartment_has_tenant")
-public class ApartmentHasTenant {
-    @EmbeddedId
-    private ApartmentHasTenantId id;
+@Table(name = "apartment_has_owner")
+public class ApartmentHasOwner {
+    @Id
+    @Column(name = "resident_idresident_owner", nullable = false)
+    private Integer id;
 
-    @MapsId("residentIdresidentTenant")
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "resident_idresident_tenant", nullable = false)
-    private Resident residentIdresidentTenant;
-
-    @MapsId("renthistoryIdrenthistory")
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "renthistory_idrenthistory", nullable = false)
-    private Renthistory renthistoryIdrenthistory;
+    @MapsId
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "resident_idresident_owner", nullable = false)
+    private Resident resident;
 
     @NotNull
     @JoinColumns({

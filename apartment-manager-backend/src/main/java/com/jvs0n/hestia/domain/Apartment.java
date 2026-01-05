@@ -1,4 +1,4 @@
-package com.jvs0n.apartmentmanagerbackend.domain;
+package com.jvs0n.hestia.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

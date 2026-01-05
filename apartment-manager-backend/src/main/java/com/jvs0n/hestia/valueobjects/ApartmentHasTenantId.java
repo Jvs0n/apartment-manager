@@ -1,4 +1,4 @@
-package com.jvs0n.apartmentmanagerbackend.valueobjects;
+package com.jvs0n.hestia.valueobjects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

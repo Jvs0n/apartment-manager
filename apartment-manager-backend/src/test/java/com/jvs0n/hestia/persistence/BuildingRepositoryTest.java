@@ -1,8 +1,8 @@
-package com.jvs0n.apartmentmanagerbackend.persistence;
+package com.jvs0n.hestia.persistence;
 
-import com.jvs0n.apartmentmanagerbackend.TestcontainersConfiguration;
-import com.jvs0n.apartmentmanagerbackend.domain.Building;
-import com.jvs0n.apartmentmanagerbackend.domain.Manager;
+import com.jvs0n.hestia.TestcontainersConfiguration;
+import com.jvs0n.hestia.domain.Building;
+import com.jvs0n.hestia.domain.Manager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

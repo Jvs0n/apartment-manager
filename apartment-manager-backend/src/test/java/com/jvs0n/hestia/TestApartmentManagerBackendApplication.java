@@ -1,4 +1,4 @@
-package com.jvs0n.apartmentmanagerbackend;
+package com.jvs0n.hestia;
 
 import com.github.dockerjava.api.model.ExposedPort;
 import com.github.dockerjava.api.model.HostConfig;
@@ -9,8 +9,6 @@ import org.springframework.boot.testcontainers.service.connection.ServiceConnect
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.testcontainers.containers.PostgreSQLContainer;
-
-import javax.swing.*;
 
 @Configuration
 public class TestApartmentManagerBackendApplication {

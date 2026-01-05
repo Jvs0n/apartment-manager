@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.Jvs0n</groupId>
-    <artifactId>apartment-manager-backend</artifactId>
+    <artifactId>hestia-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>apartment-manager-backend</name>
-    <description>apartment-manager-backend</description>
+    <name>hestia-backend</name>
+    <description>hestia-backend</description>
     <url/>
     <licenses>
         <license/>

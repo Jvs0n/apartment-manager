@@ -1,4 +1,4 @@
-package com.jvs0n.apartmentmanagerbackend.domain;
+package com.jvs0n.hestia.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -7,7 +7,6 @@ import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
-import java.time.LocalDate;
 import java.time.ZonedDateTime;
 
 @Getter

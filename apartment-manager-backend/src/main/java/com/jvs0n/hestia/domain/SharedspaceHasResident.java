@@ -1,6 +1,6 @@
-package com.jvs0n.apartmentmanagerbackend.domain;
+package com.jvs0n.hestia.domain;
 
-import com.jvs0n.apartmentmanagerbackend.valueobjects.SharedspaceHasResidentId;
+import com.jvs0n.hestia.valueobjects.SharedspaceHasResidentId;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

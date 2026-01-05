@@ -1,14 +1,13 @@
-package com.jvs0n.apartmentmanagerbackend.persistence;
+package com.jvs0n.hestia.persistence;
 
-import com.jvs0n.apartmentmanagerbackend.TestcontainersConfiguration;
-import com.jvs0n.apartmentmanagerbackend.domain.Resident;
+import com.jvs0n.hestia.TestcontainersConfiguration;
+import com.jvs0n.hestia.domain.Resident;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
 import org.springframework.context.annotation.Import;
 import java.time.ZonedDateTime;
-import java.util.Objects;
 import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
