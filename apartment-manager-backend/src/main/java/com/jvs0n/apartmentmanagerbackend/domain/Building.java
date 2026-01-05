@@ -14,8 +14,9 @@ import lombok.*;
 @AllArgsConstructor
 public class Building {
     @Id
+    @GeneratedValue
     @Column(name = "idbuilding", nullable = false)
-    private Integer id;
+    private long id;
 
     @Size(max = 45)
     @NotNull

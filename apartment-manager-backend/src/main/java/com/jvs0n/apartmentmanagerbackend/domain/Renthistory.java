@@ -15,7 +15,7 @@ import java.time.LocalDate;
 public class Renthistory {
     @Id
     @Column(name = "idrenthistory", nullable = false)
-    private Integer id;
+    private Long id;
 
     @NotNull
     @Column(name = "previousrent", nullable = false, precision = 10, scale = 2)

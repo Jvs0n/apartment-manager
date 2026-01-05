@@ -1,24 +1,25 @@
 package com.jvs0n.apartmentmanagerbackend.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
+import java.time.ZonedDateTime;
 
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "manager")
 public class Manager {
     @Id
+    @GeneratedValue
     @Column(name = "idmanager", nullable = false)
-    private Integer id;
+    private Long id;
 
     @Size(max = 200)
     @NotNull
@@ -32,7 +33,7 @@ public class Manager {
 
     @NotNull
     @Column(name = "birthday", nullable = false)
-    private LocalDate birthday;
+    private ZonedDateTime birthday;
 
 
 }

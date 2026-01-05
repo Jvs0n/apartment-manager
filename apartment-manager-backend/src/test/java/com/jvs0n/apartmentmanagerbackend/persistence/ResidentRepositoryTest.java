@@ -22,6 +22,7 @@ class ResidentRepositoryTest {
     private Resident r;
     @BeforeEach
     void setUp() {
+        //ARRANGE
          r = Resident.builder()
                 .email("John@Resident.com")
                 .telnr("+43 660 000 0000")
@@ -44,21 +45,27 @@ class ResidentRepositoryTest {
 
     @Test
     void canUpdateResident() {
+        //ACT
         Resident saved = residentRepository.save(r);
 
         saved.setFirstname("Janet");
         residentRepository.save(saved);
 
         Resident updated = residentRepository.findById(saved.getId()).orElseThrow();
+
+        //ASSERT
         assertThat(updated.getFirstname()).isEqualTo("Janet");
     }
 
     @Test
     void canDeleteResident() {
+        //ACT
         Resident saved = residentRepository.save(r);
         residentRepository.delete(saved);
 
         Optional<Resident> retrieved = residentRepository.findById(saved.getId());
+
+        //ASSERT
         assertTrue(retrieved.isEmpty());
     }
 
