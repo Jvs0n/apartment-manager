@@ -1,0 +1,23 @@
+name: apartment-manager-backend CI
+
+on:
+  push:
+    branches: [ 'main', 'feat/*' ]
+  pull_request:
+    branches: [ 'main', 'feat/*' ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'zulu'
+          java-version: '25'
+      - name: Build and Test Spring Boot
+        working-directory: apartment-manager-backend
+        run: mvn clean install -DskipTests && mvn test
