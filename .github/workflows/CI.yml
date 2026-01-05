@@ -2,9 +2,9 @@ name: apartment-manager-backend CI
 
 on:
   push:
-    branches: [ "**" ]
+    branches: [ 'main', 'feat/*' ]
   pull_request:
-    branches: [ "**" ]
+    branches: [ 'main', 'feat/*' ]
 
 jobs:
   build-and-test:
