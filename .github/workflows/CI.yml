@@ -14,11 +14,12 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
+
       - name: Setup Java
         uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
           java-version: '25'
       - name: Build and Test Spring Boot
-        working-directory: '/apartment-manager-backend'
-        run: 'mvn clean install -DskipTests && mvn test'
+        working-directory: apartment-manager-backend
+        run: mvn clean install -DskipTests && mvn test
